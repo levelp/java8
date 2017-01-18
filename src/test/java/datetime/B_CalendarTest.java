@@ -41,9 +41,10 @@ public class B_CalendarTest {
                 new SimpleDateFormat("'Дата и время:' dd.MM.yyyy HH:mm:ss");
         System.out.println(dateFormat.format(now.getTime()));
 
+
+        // Пример разбора даты со временем
         SimpleDateFormat dateFormat2 =
                 new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
-
         Calendar cal = Calendar.getInstance();
         Date parsedDate = dateFormat2.parse("04.03.2015 22:34:11");
         cal.setTime(parsedDate);

@@ -12,6 +12,7 @@ package lambda;
  * @see String#equals(Object) equals
  * @see LambdaDemo
  */
+@FunctionalInterface
 public interface Operation {
     /**
      * Применить <b>операцию</b>
@@ -27,4 +28,11 @@ public interface Operation {
      * @return результат операции
      */
     int apply(int a, int b);
+
+    /**
+     * @return Название операции
+     */
+    default String getName() {
+        return getClass().getName();
+    }
 }

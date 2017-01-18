@@ -53,6 +53,11 @@ public class LambdaDemo {
         return a * b;
     }
 
+    /**
+     * @param arr Массив целых чисел
+     * @param op  Бинарная операция, которую надо выполнить с этим массивом
+     * @return результат выполнения операции
+     */
     private static int map(int[] arr, Operation op) {
         if (arr.length < 1)
             throw new IllegalArgumentException("Массив должен содержать хотя бы один элемент");

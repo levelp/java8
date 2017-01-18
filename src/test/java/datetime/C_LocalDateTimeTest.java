@@ -32,7 +32,10 @@ public class C_LocalDateTimeTest extends Assert {
         System.out.println("День месяца: " + now.getDayOfMonth());
         System.out.println("День недели: " + now.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.forLanguageTag("RU")));
         out.println("Через 10 дней: " + dateFormat.format(now.plusDays(10)));
-        out.println(now.minusMonths(4).plusDays(3));
+        out.println(now.minusMonths(4).plusDays(3).minusHours(2));
+
+        ZonedDateTime zdt = now.atZone(ZoneId.of("Europe/Moscow"));
+        // TODO: как вывести локальную тайм-зону
 
         out.println("Через 3 месяца и 10 дней и 2 часа: " +
                 dateFormat.format(now.plusMonths(3).plusDays(10).plusHours(2)));
